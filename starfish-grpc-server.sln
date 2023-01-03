@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{280D2EFF-6050-42E3-9E31-E4CFD5B6E208}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ADEE9CA6-6948-41CF-97F6-2E04343B6B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starfish.GrpcService.Server", "src\Starfish.GrpcService.Server\Starfish.GrpcService.Server.csproj", "{C31981FA-7402-4440-8FDD-5D04ACAABC79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C31981FA-7402-4440-8FDD-5D04ACAABC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31981FA-7402-4440-8FDD-5D04ACAABC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31981FA-7402-4440-8FDD-5D04ACAABC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31981FA-7402-4440-8FDD-5D04ACAABC79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C31981FA-7402-4440-8FDD-5D04ACAABC79} = {280D2EFF-6050-42E3-9E31-E4CFD5B6E208}
+	EndGlobalSection
+EndGlobal
