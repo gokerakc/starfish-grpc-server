@@ -18,7 +18,7 @@ builder.Host.UseSerilog((builderContext, serviceProvider, loggerConfiguration) =
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.MapGrpcService<RequestLoggerService>();
+app.MapGrpcService<FraudCheckerService>();
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
