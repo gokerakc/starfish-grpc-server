@@ -1,4 +1,5 @@
 using Serilog;
+using Starfish.GrpcService.Server;
 using Starfish.GrpcService.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+
+builder.Services.AddSingleton<IStarfishRateLimiterService, StarfishRateLimiterService>();
 
 // Use Serilog
 builder.Host.UseSerilog((builderContext, serviceProvider, loggerConfiguration) =>
@@ -19,6 +22,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.MapGrpcService<FraudCheckerService>();
+app.MapGrpcService<RateLimiterService>();
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
